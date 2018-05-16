@@ -1,6 +1,6 @@
-class CreateUsersAnswers < ActiveRecord::Migration[5.2]
+class CreateUserAnswers < ActiveRecord::Migration[5.2]
   def change
-    create_table :users_answers do |t|
+    create_table :user_answers do |t|
       t.references :user, foreign_key: true
       t.references :question, foreign_key: true
 
