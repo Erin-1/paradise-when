@@ -1,0 +1,20 @@
+.button {
+border-radius: 10px;
+color: #ffffff;
+position: absolute;
+bottom: 100px;
+right: 150px;
+background-color:#63e3ed;
+height: 75px;
+width: 150px;
+justify-content: space-around;
+display: inline-flex;
+align-items: center;
+}
+
+
+
+a:hover {
+    color: #e8f29d;
+    text-decoration: none;
+}
