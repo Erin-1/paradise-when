@@ -1,0 +1,38 @@
+.banner {
+  background-image: asset-url('landingpage.jpg');
+  background-size: cover;
+  height: 800px;
+  color: #ffffff;
+  text-align: left;
+  padding-top: 100px;
+  font-family: 'Libre Baskerville', serif;
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+  position: relative;
+}
+
+
+
+h1{
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  margin-top: 0px;
+  margin-bottom:20px;
+  padding:80px;
+ font-size:75px;
+ font-family: 'Libre Baskerville', serif;
+ line-height: 140px;
+}
+
+h2{
+  position: absolute;
+  left: 80px;
+  font-size:40px;
+  padding: 40px;
+  margin-top:340px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+
