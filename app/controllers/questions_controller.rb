@@ -1,7 +1,9 @@
 class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
-    @next = Question.find(params[:id].to_i + 1)
-    @previous = Question.find(params[:id].to_i - 1)
+    @all_questions = Question.all
+    @current_index = @all_questions.index(@question)
+    @next = @all_questions[@current_index + 1]
+    @previous = @all_questions[@current_index - 1]
   end
 end

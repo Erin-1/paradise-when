@@ -1,12 +1,43 @@
-<h2><%= @question.content %></h2>
-<div class="answers">
-<% @question.answers.each do |answer| %>
 
-<p> <%= answer.content  %> </p>
 
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class = "questions">
+         <p><%= @question.content %></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class = "answer">
+        <% @question.answers.each do |answer| %>
+        <button>
+          <p> <%= answer.content  %> </p>
+        </button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+    <div class="col-xs-6">
+      <% unless @next.nil? %>
+        <%= link_to "Next", question_path(@next), class: "btn btn-primary" %>
+      <% end %>
+
+      <%= link_to "Previous", question_path(@previous), class: "btn btn-warning" %>
+    </div>
 </div>
 
+<!--
+questions_index = []
 
-<%= link_to "Next", question_path(@next) %>
-<%= link_to "Previous", question_path(@previous) %>
+question_index = question.id.to_i - 1
+
+questions_index.each do |index|
+questions_index << @question.id - 1
+end -->
+
+<!-- @next = question.id
+@previous = question_index - 1
+@previous = question.id -2 -->
+
