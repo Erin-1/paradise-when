@@ -1,0 +1,12 @@
+<h2><%= @question.content %></h2>
+<div class="answers">
+<% @question.answers.each do |answer| %>
+
+<p> <%= answer.content  %> </p>
+
+<% end %>
+</div>
+
+
+<%= link_to "Next", question_path(@next) %>
+<%= link_to "Previous", question_path(@previous) %>
