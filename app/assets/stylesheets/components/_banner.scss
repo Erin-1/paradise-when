@@ -16,7 +16,7 @@
 
 
 
-h1{
+.tag_line {
   position: absolute;
   top: 80px;
   left: 20px;
@@ -28,12 +28,13 @@ h1{
  line-height: 140px;
 }
 
-h2{
+.banner-content{
   position: absolute;
+  top: 400px;
   left: 80px;
   font-size:40px;
-  padding: 40px;
-  margin-top:340px;
+  // padding: 40px;
+  // margin-top:340px;
   font-family: 'Karla', sans-serif;
 }
 
