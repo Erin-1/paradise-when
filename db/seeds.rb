@@ -8,7 +8,7 @@
 
 question_1 = Question.new(content: "What do you want to put back in balance in your life?")
 question_1.save
-answer_11 = Answer.new(content: "Physical strength and stamina ", question: question_1)
+answer_11 = Answer.new(content: "Physical strength and stamina ", question: question_1, photo: "ghilliesunset.jpg")
 answer_11.save
 answer_12 = Answer.new(content: "Peace and mindfulness", question: question_1)
 answer_12.save
