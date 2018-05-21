@@ -9,7 +9,7 @@
   <div class="row">
     <% @question.answers.each do |answer| %>
     <div class="col-xs-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+      <div class="card">
 
         <div class="card-description">
           <%= answer.content %>
@@ -20,16 +20,16 @@
       </div>
 <!-- end loop -->
     </div>
-     <% unless @next.nil? %>
-        <%= link_to "EVENT LISTENERS CLICK", question_path(@next) %>
-    <% end %>
+
   <% end %>
 
 
   </div>
 </div>
   <div class="col-xs-6">
-
+    <% unless @next.nil? %>
+      <%= link_to "Next", question_path(@next),class: "btn btn-info" %>
+    <% end %>
 
     <%= link_to "Previous", question_path(@previous), class: "btn btn-warning" %>
   </div>
