@@ -11,7 +11,7 @@
     <%= link_to user_answers_path(answer_id: answer.id), method: :post do %>
       <div class="col-xs-4">
         <div class="card">
-        <%#= image_tag answer.photo %>
+          <%= image_tag answer.photo, width: "100%" %>
           <div class="card-description">
             <%= answer.content %>
 

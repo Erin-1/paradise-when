@@ -5,6 +5,7 @@ class UserAnswersController < ApplicationController
     if @user_answer.save
       question = @user_answer.answer.question.next
       redirect_to question_path(question)
+      # render 'questions/show'
     else
       @question = user_answer.question
       # render 'questions/show'
@@ -26,3 +27,5 @@ class UserAnswersController < ApplicationController
     redirect_to user_answers_path
   end
 end
+
+
