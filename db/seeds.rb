@@ -188,5 +188,5 @@ answer_1106 = Answer.new(content: "Family with oap", question: question_11, phot
 answer_1106.save
 
 question_12 = Question.new(content: "So that we can get back to your interest please leave your're email address")
-answer_1201 = Answer.new(content: "", question: question_12)
+answer_1201 = Answer.new(content: "", question: question_12, photo: "baliricereflection.jpg")
 answer_1201.save
