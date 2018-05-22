@@ -1,0 +1,17 @@
+<% @question.answers.each do |answer| %>
+    <%= link_to user_answer_path(@user_answer, answer_id: answer.id), method: :patch do %>
+      <div class="col-xs-4">
+        <div class="card">
+        <%#= image_tag answer.photo %>
+          <div class="card-description">
+            <%= answer.content %>
+
+          </div>
+          <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
+          <!-- <a class="card-link" href="#" ></a> -->
+        </div>
+  <!-- end loop -->
+      </div>
+    <% end %>
+
+  <% end %>

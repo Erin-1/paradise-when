@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -9,24 +7,53 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-6">
-      <div class = "answer">
-        <% @question.answers.each do |answer| %>
-        <button>
-          <p> <%= answer.content  %> </p>
-        </button>
-        <% end %>
-      </div>
-    </div>
-  </div>
-    <div class="col-xs-6">
-      <% unless @next.nil? %>
-        <%= link_to "Next", question_path(@next), class: "btn btn-primary" %>
-      <% end %>
+    <% @question.answers.each do |answer| %>
+    <%= link_to user_answers_path(answer_id: answer.id), method: :post do %>
+      <div class="col-xs-4">
+        <div class="card">
+          <%= image_tag answer.photo, width: "100%" %>
+          <div class="card-description">
+            <%= answer.content %>
 
-      <%= link_to "Previous", question_path(@previous), class: "btn btn-warning" %>
-    </div>
+          </div>
+          <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay"> -->
+          <!-- <a class="card-link" href="#" ></a> -->
+        </div>
+  <!-- end loop -->
+      </div>
+    <% end %>
+
+  <% end %>
+
+
+  </div>
 </div>
+  <div class="col-xs-6">
+    <% unless @next.nil? %>
+      <%= link_to "Next", question_path(@next),class: "btn btn-info" %>
+      <% else %>
+      <%= link_to "submit request", user_answers_path(@given_answers), class: "btn btn-success" %>
+  </div>
+    <% end %>
+
+    <%= link_to "Previous", question_path(@previous), class: "btn btn-warning" %>
+
+</div>
+
+<!-- Loop over all the answers -->
+<%#= answers.each do |a| %>
+<!-- for each of the answers create a card -->
+  <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+    <div class="card-category">Popular</div>
+    <div class="card-description">
+      <h2>answer.content</h2>
+      <p>super answer information</p>
+    </div>
+    <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+    <a class="card-link" href="#" ></a>
+  </div> -->
+<!-- end loop -->
+<%#=  end %>
 
 <!--
 questions_index = []

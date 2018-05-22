@@ -1,0 +1,8 @@
+<% @user_answers.each do |user_answer| %>
+  <p>Q: <%= user_answer.answer.question.content %></p>
+  <p>A: <%= user_answer.answer.content %> </p>
+  <%= link_to "edit answer", edit_user_answer_path(user_answer) %>
+<% end %>
+<%= link_to "Book Trip"  %>
+<%= link_to "return to home page", root_path, class: "btn btn-success" %>
+
